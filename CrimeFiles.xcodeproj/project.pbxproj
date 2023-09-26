@@ -13,6 +13,9 @@
 		11BB91C02ABE248D00822599 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11BB91BF2ABE248D00822599 /* Preview Assets.xcassets */; };
 		11BB91C22ABE248D00822599 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB91C12ABE248D00822599 /* Persistence.swift */; };
 		11BB91C52ABE248D00822599 /* CrimeFiles.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11BB91C32ABE248D00822599 /* CrimeFiles.xcdatamodeld */; };
+		9367BCD72AC3090700576D08 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9367BCD62AC3090700576D08 /* CellView.swift */; };
+		9367BCD92AC3095E00576D08 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9367BCD82AC3095E00576D08 /* BackgroundView.swift */; };
+		9367BCDB2AC3099A00576D08 /* MainBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9367BCDA2AC3099A00576D08 /* MainBackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		11BB91BF2ABE248D00822599 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		11BB91C12ABE248D00822599 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		11BB91C42ABE248D00822599 /* CrimeFiles.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CrimeFiles.xcdatamodel; sourceTree = "<group>"; };
+		9367BCD62AC3090700576D08 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		9367BCD82AC3095E00576D08 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		9367BCDA2AC3099A00576D08 /* MainBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,9 @@
 				11BB91C12ABE248D00822599 /* Persistence.swift */,
 				11BB91C32ABE248D00822599 /* CrimeFiles.xcdatamodeld */,
 				11BB91BE2ABE248D00822599 /* Preview Content */,
+				9367BCD62AC3090700576D08 /* CellView.swift */,
+				9367BCD82AC3095E00576D08 /* BackgroundView.swift */,
+				9367BCDA2AC3099A00576D08 /* MainBackgroundView.swift */,
 			);
 			path = CrimeFiles;
 			sourceTree = "<group>";
@@ -143,10 +152,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9367BCD92AC3095E00576D08 /* BackgroundView.swift in Sources */,
 				11BB91C22ABE248D00822599 /* Persistence.swift in Sources */,
+				9367BCD72AC3090700576D08 /* CellView.swift in Sources */,
 				11BB91BB2ABE248C00822599 /* ContentView.swift in Sources */,
 				11BB91C52ABE248D00822599 /* CrimeFiles.xcdatamodeld in Sources */,
 				11BB91B92ABE248C00822599 /* CrimeFilesApp.swift in Sources */,
+				9367BCDB2AC3099A00576D08 /* MainBackgroundView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
