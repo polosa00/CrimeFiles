@@ -13,62 +13,18 @@ struct MainView: View {
     
     var body: some View {
         ZStack{
-            BackgroundView()
-            VStack{
-                HStack{
-                    Image("clip")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(maxWidth: UIScreen.main.bounds.size.width / 10)
-                    
-                    Spacer()
-                    Image("topSecret")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(maxWidth: UIScreen.main.bounds.size.width / 3)
-                        .opacity(0.6)
-                        .rotationEffect(Angle(degrees: 8))
-                        .padding(.top, -15)
-                    
-                }
-                Spacer()
+            MainBackGroundView()
+            
+            List(viewModel.inspections, id: \.title) { inspectionDetailViewmodel in
+                CellView(title: inspectionDetailViewmodel.title, imageName: inspectionDetailViewmodel.imageName)
+                    .listRowBackground(Color.clear)
+                    .listRowSeparator(.hidden)
             }
-            .padding(.horizontal)
-            VStack{
-                Image("CrimeFiles")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(maxWidth: UIScreen.main.bounds.size.width / 1.6)
-                    .padding(.top, 80)
-                
-                //MARK: - List
-                ZStack {
-                    
-                    BackgroundView()
-                    List(viewModel.inspections, id: \.title) { inspectionDetailViewmodel in
-                        CellView(title: inspectionDetailViewmodel.title, imageName: inspectionDetailViewmodel.imageName)
-                            
-                            
-                    }
-                    .border(.yellow, width: 15)
-                    
-                    .frame(width: 300)
-                    .listStyle(.plain) // Устанавливаем стиль списка на plain
-                }
-                .border(Color.red, width: 4)
-                
-                
-                Spacer()
-                
-                Image("detective")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(maxWidth: UIScreen.main.bounds.size.width / 4)
-                    .padding(.bottom, 20)
-                
-            }
+            .padding(.top, 150)
+            .listStyle(.plain) // Устанавливаем стиль списка на plain
+            
+            
         }
-        .ignoresSafeArea()
     }
 }
 
