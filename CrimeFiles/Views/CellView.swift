@@ -12,7 +12,6 @@ struct CellView: View {
     let imageName: String
     
     var body: some View {
-        ZStack {
             HStack{
                 Spacer()
                 Image(imageName)
@@ -24,23 +23,21 @@ struct CellView: View {
                     .padding(10)
                 Spacer()
             }
-            //.background(
-//                LinearGradient(
-//                gradient: Gradient(
-//                    colors: [
-//                        Color(red: 241 / 255, green: 231 / 255, blue: 196 / 255, opacity: 0.6),
-//                        Color(red: 1.0, green: 1.0, blue: 1.0, opacity: 0.5),
-//                        Color(red: 1.0, green: 1.0, blue: 1.0, opacity: 0.6)
-//                    ]
-//                ),
-//                startPoint: .top,
-//                endPoint: .bottom
-//            )
-//            )
-//            .cornerRadius(10)
-//            .padding(8)
-        }
-     //   .background(Color.clear)
+            .background(
+               LinearGradient(
+                gradient: Gradient(
+                    colors: [
+                        Color(red: 241 / 255, green: 231 / 255, blue: 196 / 255, opacity: 0.6),
+                       Color(red: 1.0, green: 1.0, blue: 1.0, opacity: 0.5),
+                       Color(red: 1.0, green: 1.0, blue: 1.0, opacity: 0.6)
+                    ]
+               ),
+                startPoint: .top,
+              endPoint: .bottom
+            )
+            )
+            .cornerRadius(10)
+            .padding(8)
         
         
     }
@@ -48,6 +45,6 @@ struct CellView: View {
 
 struct CellView_Previews: PreviewProvider {
     static var previews: some View {
-        CellView(title: "Osmotr", imageName: "detective")
+        CellView(title: "Подготовка", imageName: "detective")
     }
 }
