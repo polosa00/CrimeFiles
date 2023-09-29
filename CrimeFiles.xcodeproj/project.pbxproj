@@ -20,6 +20,7 @@
 		9367BCE02AC6F5EA00576D08 /* AlegreyaSC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9367BCDD2AC6F5EA00576D08 /* AlegreyaSC-Regular.ttf */; };
 		9367BCE12AC6F5EA00576D08 /* AlegreyaSC-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9367BCDE2AC6F5EA00576D08 /* AlegreyaSC-Bold.ttf */; };
 		9367BCE22AC6F5EA00576D08 /* AlegreyaSC-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9367BCDF2AC6F5EA00576D08 /* AlegreyaSC-Medium.ttf */; };
+		9367BCE52AC6F79400576D08 /* MainBackGroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9367BCE42AC6F79400576D08 /* MainBackGroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		9367BCDE2AC6F5EA00576D08 /* AlegreyaSC-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSC-Bold.ttf"; sourceTree = "<group>"; };
 		9367BCDF2AC6F5EA00576D08 /* AlegreyaSC-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSC-Medium.ttf"; sourceTree = "<group>"; };
 		9367BCE32AC6F67D00576D08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9367BCE42AC6F79400576D08 /* MainBackGroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBackGroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				9367BCD62AC3090700576D08 /* CellView.swift */,
 				9367BCD82AC3095E00576D08 /* BackgroundView.swift */,
 				9367BCDA2AC3099A00576D08 /* MainView.swift */,
+				9367BCE42AC6F79400576D08 /* MainBackGroundView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				9367BCD72AC3090700576D08 /* CellView.swift in Sources */,
 				11BB91C52ABE248D00822599 /* CrimeFiles.xcdatamodeld in Sources */,
 				11BB91B92ABE248C00822599 /* CrimeFilesApp.swift in Sources */,
+				9367BCE52AC6F79400576D08 /* MainBackGroundView.swift in Sources */,
 				9367BCDB2AC3099A00576D08 /* MainView.swift in Sources */,
 				7879AA862AC5C415008ABC5F /* Inspection.swift in Sources */,
 			);
