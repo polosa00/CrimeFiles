@@ -16,17 +16,27 @@ struct MainView: View {
             MainBackGroundView()
             
             List(viewModel.inspections, id: \.title) { inspectionDetailViewmodel in
-                CellView(title: inspectionDetailViewmodel.title, imageName: inspectionDetailViewmodel.imageName)
-                    .listRowBackground(Color.clear)
-                    .listRowSeparator(.hidden)
+                NavigationLink {
+                    InspectionView(listInspection: [""])
+                } label: {
+                    CellView(title: inspectionDetailViewmodel.title, imageName: inspectionDetailViewmodel.imageName)
+                }
+
+                .listRowBackground(Color.clear)
+                .listRowSeparator(.hidden)
+
+
             }
             .padding(.top, 150)
             .listStyle(.plain) // Устанавливаем стиль списка на plain
             
             
+            
         }
     }
 }
+
+
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
