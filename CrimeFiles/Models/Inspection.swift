@@ -16,6 +16,12 @@ struct Inspection {
 struct RowInspection {
     let title: String
     let imageName: String
+    let rowsDetails: [RowDetailInspection]?
+    let data: String
 }
 
-
+struct RowDetailInspection {
+    let title: String
+    let imageName: String
+    let data: String
+}

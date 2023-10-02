@@ -15,31 +15,53 @@ struct DataBase {
             rows: [
                 RowInspection(
                     title: "Общие положения осмотра места происшествия",
-                    imageName: ""
+                    imageName: "testImage",
+                    rowsDetails: [
+                        RowDetailInspection(title: "This is test details Row 1", imageName: "testImage", data: "Fill in in the future!"),
+                        RowDetailInspection(title: "This is test details Row 2", imageName: "testImage", data: "Fill in in the future!"),
+                        RowDetailInspection(title: "This is test details Row 3", imageName: "testImage", data: "Fill in in the future!"),
+                        RowDetailInspection(title: "This is test details Row 4", imageName: "testImage", data: "Fill in in the future!")
+                    ],
+                    data: "Fill in in the future!"
+                
                 ),
                 RowInspection(
                     title: "Обеспечение готовности к выезду на место происшествия",
-                    imageName: ""
+                    imageName: "testImage",
+                    rowsDetails: nil,
+                    data: "Fill in in the future!"
                 ),
                 RowInspection(
                     title: "Действия следователя при получении сообщения о преступлении",
-                    imageName: ""
+                    imageName: "testImage",
+                    rowsDetails: nil,
+                    data: "Fill in in the future!"
+                    
                 ),
                 RowInspection(
                     title: "Действия по прибытии на место происшествия",
-                    imageName: ""
+                    imageName: "testImage",
+                    rowsDetails: nil,
+                    data: "Fill in in the future!"
                 ),
                 RowInspection(
                     title: "Обязательные участники осмотра места происшествия",
-                    imageName: ""
+                    imageName: "testImage",
+                    rowsDetails: nil,
+                    data: "Fill in in the future!"
                 ),
                 RowInspection(
                     title: "Дополнительные участники осмотра места происшествия",
-                    imageName: ""
+                    imageName: "testImage",
+                    rowsDetails: nil,
+                    data: "Fill in in the future!"
+                    
                 ),
                 RowInspection(
                     title: "Определение границ осмотра места происшествия",
-                    imageName: ""
+                    imageName: "testImage",
+                    rowsDetails: nil,
+                    data: "Fill in in the future!"
                 )
             ]
         ),
@@ -49,35 +71,52 @@ struct DataBase {
             rows: [
                 RowInspection(
                     title: "Осмотр жилища",
-                    imageName: ""
+                    imageName: "testImage",
+                    rowsDetails: nil,
+                    data: "Fill in in the future!"
+                    
                 ),
                 RowInspection(
                     title: "Осмотр участка местности",
-                    imageName: ""
+                    imageName: "testImage",
+                    rowsDetails: nil,
+                    data: "Fill in in the future!"
                 ),
                 RowInspection(
                     title: "Осмотр трупа",
-                    imageName: ""
+                    imageName: "testImage",
+                    rowsDetails: nil,
+                    data: "Fill in in the future!"
                 ),
                 RowInspection(
                     title: "Осмотр транспортного средства",
-                    imageName: ""
+                    imageName: "testImage",
+                    rowsDetails: nil,
+                    data: "Fill in in the future!"
                 ),
                 RowInspection(
                     title: "Осмотр и изъятие следов крови",
-                    imageName: ""
+                    imageName: "testImage",
+                    rowsDetails: nil,
+                    data: "Fill in in the future!"
                 ),
                 RowInspection(
                     title: "Работа с запаховыми следами",
-                    imageName: ""
+                    imageName: "testImage",
+                    rowsDetails: nil,
+                    data: "Fill in in the future!"
                 ),
                 RowInspection(
                     title: "Работа со следами рук, ног",
-                    imageName: ""
+                    imageName: "testImage",
+                    rowsDetails: nil,
+                    data: "Fill in in the future!"
                 ),
                 RowInspection(
                     title: "Работа с орудиями преступления",
-                    imageName: ""
+                    imageName: "testImage",
+                    rowsDetails: nil,
+                    data: "Fill in in the future!"
                 )
             ]
         ),
@@ -87,27 +126,39 @@ struct DataBase {
             rows: [
                 RowInspection(
                     title: "Описание, измерения, привязки обьектов и следов",
-                    imageName: ""
+                    imageName: "testImage",
+                    rowsDetails: nil,
+                    data: "Fill in in the future!"
                 ),
                 RowInspection(
                     title: "Изъятие и упаковка объектов и следов",
-                    imageName: ""
+                    imageName: "testImage",
+                    rowsDetails: nil,
+                    data: "Fill in in the future!"
                 ),
                 RowInspection(
                     title: "Составление планов и схем",
-                    imageName: ""
+                    imageName: "testImage",
+                    rowsDetails: nil,
+                    data: "Fill in in the future!"
                 ),
                 RowInspection(
                     title: "Фотосъемка",
-                    imageName: ""
+                    imageName: "testImage",
+                    rowsDetails: nil,
+                    data: "Fill in in the future!"
                 ),
                 RowInspection(
                     title: "Структура протокола осмотра места происшествия",
-                    imageName: ""
+                    imageName: "testImage",
+                    rowsDetails: nil,
+                    data: "Fill in in the future!"
                 ),
                 RowInspection(
                     title: "Камеры видеонаблюдения",
-                    imageName: ""
+                    imageName: "testImage",
+                    rowsDetails: nil,
+                    data: "Fill in in the future!"
                 )
             ]
         )

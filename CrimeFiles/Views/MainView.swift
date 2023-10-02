@@ -15,12 +15,19 @@ struct MainView: View {
         NavigationStack {
             ZStack{
                 MainBackGroundView()
+                    .ignoresSafeArea()
                 
                 List(viewModel.inspections, id: \.title) { inspectionDetailViewmodel in
                     NavigationLink {
-                        InspectionView(viewModel: inspectionDetailViewmodel.rows, title: inspectionDetailViewmodel.title)
+                        InspectionRowsView(
+                            viewModel: inspectionDetailViewmodel.rows,
+                            title: inspectionDetailViewmodel.title
+                        )
                     } label: {
-                        CellView(title: inspectionDetailViewmodel.title, imageName: inspectionDetailViewmodel.imageName)
+                        CellView(
+                            title: inspectionDetailViewmodel.title,
+                            imageName: inspectionDetailViewmodel.imageName
+                        )
                     }
                     .listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)
@@ -28,7 +35,6 @@ struct MainView: View {
                 }
                 .padding(.top, 150)
                 .listStyle(.plain) // Устанавливаем стиль списка на plain
-            
             
             }
             
