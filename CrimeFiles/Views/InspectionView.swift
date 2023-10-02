@@ -19,11 +19,11 @@ struct InspectionView: View {
                 BackgroundView()
                     .ignoresSafeArea()
                 
-                List(viewModel, id: \.title) { rowinspection in
+                List(viewModel, id: \.title) { rowInspection in
                     NavigationLink {
-                        FinishView(title: rowinspection.title)
+                        FinishView(title: rowInspection.title)
                     } label: {
-                        CellView(title: rowinspection.title, imageName: rowinspection.imageName)
+                        CellView(title: rowInspection.title, imageName: rowInspection.imageName)
                     }
                     .listRowBackground(Color.clear)
                 }

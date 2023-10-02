@@ -15,19 +15,15 @@ struct MainView: View {
         NavigationStack {
             ZStack{
                 MainBackGroundView()
-//                    .ignoresSafeArea()
                 
                 List(viewModel.inspections, id: \.title) { inspectionDetailViewmodel in
                     NavigationLink {
-//                        InspectionView(title: inspectionDetailViewmodel.title)
                         InspectionView(viewModel: inspectionDetailViewmodel.rows, title: inspectionDetailViewmodel.title)
                     } label: {
                         CellView(title: inspectionDetailViewmodel.title, imageName: inspectionDetailViewmodel.imageName)
                     }
-                    
                     .listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)
-                    
                     
                 }
                 .padding(.top, 150)
