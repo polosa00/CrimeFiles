@@ -24,7 +24,7 @@ struct CellView: View {
                 Spacer()
                 Spacer()
                 Text(title)
-                    .font(.custom("AlegreyaSC-Medium", size: 24))
+                    .font(.custom("AlegreyaSC-Medium", size: 22))
 //                    .padding(10)
                 Spacer()
             }

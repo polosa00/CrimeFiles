@@ -11,103 +11,103 @@ struct DataBase {
     let inspections = [
         Inspection(
             title: "Подготовка к осмотру места происшествия",
-            imageName: "detective1",
+            imageName: "PreparingForInspect",
             rows: [
                 RowInspection(
                     title: "Общие положения осмотра места происшествия",
-                    imageName: ""
+                    imageName: "GeneralProvisionsForInspecting"
                 ),
                 RowInspection(
                     title: "Обеспечение готовности к выезду на место происшествия",
-                    imageName: ""
+                    imageName: "EnsuringReadinessForDeparture"
                 ),
                 RowInspection(
                     title: "Действия следователя при получении сообщения о преступлении",
-                    imageName: ""
+                    imageName: "InvestigatorsActions"
                 ),
                 RowInspection(
                     title: "Действия по прибытии на место происшествия",
-                    imageName: ""
+                    imageName: "ActionsUponArrival"
                 ),
                 RowInspection(
                     title: "Обязательные участники осмотра места происшествия",
-                    imageName: ""
+                    imageName: "MandatoryParticipants"
                 ),
                 RowInspection(
                     title: "Дополнительные участники осмотра места происшествия",
-                    imageName: ""
+                    imageName: "AdditionalParticipants"
                 ),
                 RowInspection(
                     title: "Определение границ осмотра места происшествия",
-                    imageName: ""
+                    imageName: "DefinitionOfBoundaries"
                 )
             ]
         ),
         Inspection(
             title: "Осмотры по обьектам",
-            imageName: "detective2",
+            imageName: "InspectionsByObjects",
             rows: [
                 RowInspection(
                     title: "Осмотр жилища",
-                    imageName: ""
+                    imageName: "HomeInspection"
                 ),
                 RowInspection(
                     title: "Осмотр участка местности",
-                    imageName: ""
+                    imageName: "AreaInspection"
                 ),
                 RowInspection(
                     title: "Осмотр трупа",
-                    imageName: ""
+                    imageName: "CorpseInspection"
                 ),
                 RowInspection(
                     title: "Осмотр транспортного средства",
-                    imageName: ""
+                    imageName: "VehicleInspection"
                 ),
                 RowInspection(
                     title: "Осмотр и изъятие следов крови",
-                    imageName: ""
+                    imageName: "BloodTracesExamination."
                 ),
                 RowInspection(
                     title: "Работа с запаховыми следами",
-                    imageName: ""
+                    imageName: "WorkingWithSmell"
                 ),
                 RowInspection(
                     title: "Работа со следами рук, ног",
-                    imageName: ""
+                    imageName: "WorkingWithHandAndFeetMarks"
                 ),
                 RowInspection(
                     title: "Работа с орудиями преступления",
-                    imageName: ""
+                    imageName: "WorkingWithCrimeInstruments"
                 )
             ]
         ),
         Inspection(
             title: "Отдельные следственные действия при осмотре",
-            imageName: "detective3",
+            imageName: "SeperateActionsDuringInspections",
             rows: [
                 RowInspection(
                     title: "Описание, измерения, привязки обьектов и следов",
-                    imageName: ""
+                    imageName: "DescriptionMeasurementsObjectsAndTraces"
                 ),
                 RowInspection(
                     title: "Изъятие и упаковка объектов и следов",
-                    imageName: ""
+                    imageName: "RemovalAndPackagingObjectsAndTraces"
                 ),
                 RowInspection(
                     title: "Составление планов и схем",
-                    imageName: ""
+                    imageName: "PreparationOfPlansAndDiagrams"
                 ),
                 RowInspection(
                     title: "Фотосъемка",
-                    imageName: ""
+                    imageName: "Photography"
                 ),
                 RowInspection(
                     title: "Структура протокола осмотра места происшествия",
-                    imageName: ""
+                    imageName: "ProtocolStructure"
                 ),
                 RowInspection(
                     title: "Камеры видеонаблюдения",
-                    imageName: ""
+                    imageName: "CCTVCameras"
                 )
             ]
         )
