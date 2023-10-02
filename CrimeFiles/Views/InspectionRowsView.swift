@@ -44,6 +44,7 @@ struct InspectionRowsView: View {
                             title: rowInspection.title,
                             imageName: rowInspection.imageName
                         )
+                        
                     }
                     .listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)

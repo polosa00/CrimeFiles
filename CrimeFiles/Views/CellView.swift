@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct CellView: View {
+    
+    let fontSizeForRow: CGFloat = 20
     let title: String
     let imageName: String
     
     var body: some View {
         ZStack{
-//            Color.purple
-//                .ignoresSafeArea()
             HStack{
                 
                 Spacer()
@@ -24,7 +24,9 @@ struct CellView: View {
                 Spacer()
                 Spacer()
                 Text(title)
-                    .font(.custom("AlegreyaSC-Medium", size: 24))
+                    .multilineTextAlignment(.center)
+                    .lineSpacing(0)
+                    .font(.custom("AlegreyaSC-Medium", size: fontSizeForRow))
                     .foregroundColor(.black)
                 Spacer()
             }
