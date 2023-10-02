@@ -16,21 +16,21 @@ struct MainView: View {
             ZStack{
                 
                 MainBackGroundView()
-            
-            List(viewModel.inspections, id: \.title) { inspectionDetailViewmodel in
-                NavigationLink {
-                    InspectionView(listInspection: [""])
-                } label: {
-                    CellView(title: inspectionDetailViewmodel.title, imageName: inspectionDetailViewmodel.imageName)
+                
+                List(viewModel.inspections, id: \.title) { inspectionDetailViewmodel in
+                    NavigationLink {
+                        InspectionView(title: inspectionDetailViewmodel.title)
+                    } label: {
+                        CellView(title: inspectionDetailViewmodel.title, imageName: inspectionDetailViewmodel.imageName)
+                    }
+                    
+                    .listRowBackground(Color.clear)
+                    .listRowSeparator(.hidden)
+                    
+                    
                 }
-                
-                .listRowBackground(Color.clear)
-                .listRowSeparator(.hidden)
-                
-                
-            }
-            .padding(.top, 150)
-            .listStyle(.plain) // Устанавливаем стиль списка на plain
+                .padding(.top, 150)
+                .listStyle(.plain) // Устанавливаем стиль списка на plain
             
             
             }

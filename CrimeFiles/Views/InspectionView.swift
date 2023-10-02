@@ -8,21 +8,28 @@
 import SwiftUI
 
 struct InspectionView: View {
-    @State var listInspection = ["1", "2", "3", "4"]
+    
+    @State var listInspection = ["Row 1", "Row 2", "Row 3", "Row 4"]
+    
+    @State var title = "Title"
     var body: some View {
-        ZStack {
+        NavigationStack {
             
-            List(listInspection, id: \.self) { rowinspection in
-                NavigationLink {
-                    FinishView()
-                } label: {
-                    Text("ssssss")
-                }
-
-//                Text(rowinspection)
+            ZStack {
+                BackgroundView()
                 
-            }
-            
+                List(listInspection, id: \.self) { rowinspection in
+                    NavigationLink {
+                        FinishView()
+                    } label: {
+                        Text(rowinspection)
+                    }
+                    .listRowBackground(Color.clear)
+                }
+                .listStyle(.plain)
+                .padding(.top, 20)
+                .navigationTitle(title)
+        }
         }
     }
 }
