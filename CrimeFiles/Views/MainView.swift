@@ -12,8 +12,10 @@ struct MainView: View {
     @StateObject private var viewModel = InspectionViewModel()
     
     var body: some View {
-        ZStack{
-            MainBackGroundView()
+        NavigationStack {
+            ZStack{
+                
+                MainBackGroundView()
             
             List(viewModel.inspections, id: \.title) { inspectionDetailViewmodel in
                 NavigationLink {
@@ -21,16 +23,17 @@ struct MainView: View {
                 } label: {
                     CellView(title: inspectionDetailViewmodel.title, imageName: inspectionDetailViewmodel.imageName)
                 }
-
+                
                 .listRowBackground(Color.clear)
                 .listRowSeparator(.hidden)
-
-
+                
+                
             }
             .padding(.top, 150)
             .listStyle(.plain) // Устанавливаем стиль списка на plain
             
             
+            }
             
         }
     }
