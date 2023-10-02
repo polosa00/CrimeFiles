@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		115DCD0D2ACAFD82009DBDE3 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCD0C2ACAFD82009DBDE3 /* InformationView.swift */; };
+		115DCD0F2ACB04AE009DBDE3 /* InformationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DCD0E2ACB04AE009DBDE3 /* InformationRowView.swift */; };
 		11BB91B92ABE248C00822599 /* CrimeFilesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB91B82ABE248C00822599 /* CrimeFilesApp.swift */; };
 		11BB91BD2ABE248D00822599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11BB91BC2ABE248D00822599 /* Assets.xcassets */; };
 		11BB91C02ABE248D00822599 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11BB91BF2ABE248D00822599 /* Preview Assets.xcassets */; };
 		11BB91C52ABE248D00822599 /* CrimeFiles.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11BB91C32ABE248D00822599 /* CrimeFiles.xcdatamodeld */; };
-		11ED122F2AC9C63100831C7F /* InspectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ED122E2AC9C63100831C7F /* InspectionView.swift */; };
+		11ED122F2AC9C63100831C7F /* InspectionRowsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ED122E2AC9C63100831C7F /* InspectionRowsView.swift */; };
 		7879AA862AC5C415008ABC5F /* Inspection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7879AA852AC5C415008ABC5F /* Inspection.swift */; };
 		7879AA892AC5C502008ABC5F /* InspectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7879AA882AC5C502008ABC5F /* InspectionViewModel.swift */; };
 		7879AA8C2AC5C51F008ABC5F /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7879AA8B2AC5C51F008ABC5F /* DataBase.swift */; };
@@ -27,12 +28,13 @@
 
 /* Begin PBXFileReference section */
 		115DCD0C2ACAFD82009DBDE3 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
+		115DCD0E2ACB04AE009DBDE3 /* InformationRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationRowView.swift; sourceTree = "<group>"; };
 		11BB91B52ABE248C00822599 /* CrimeFiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrimeFiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11BB91B82ABE248C00822599 /* CrimeFilesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeFilesApp.swift; sourceTree = "<group>"; };
 		11BB91BC2ABE248D00822599 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11BB91BF2ABE248D00822599 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		11BB91C42ABE248D00822599 /* CrimeFiles.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CrimeFiles.xcdatamodel; sourceTree = "<group>"; };
-		11ED122E2AC9C63100831C7F /* InspectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionView.swift; sourceTree = "<group>"; };
+		11ED122E2AC9C63100831C7F /* InspectionRowsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionRowsView.swift; sourceTree = "<group>"; };
 		7879AA852AC5C415008ABC5F /* Inspection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inspection.swift; sourceTree = "<group>"; };
 		7879AA882AC5C502008ABC5F /* InspectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionViewModel.swift; sourceTree = "<group>"; };
 		7879AA8B2AC5C51F008ABC5F /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
@@ -137,8 +139,9 @@
 				9367BCD82AC3095E00576D08 /* BackgroundView.swift */,
 				9367BCDA2AC3099A00576D08 /* MainView.swift */,
 				9367BCE42AC6F79400576D08 /* MainBackGroundView.swift */,
-				11ED122E2AC9C63100831C7F /* InspectionView.swift */,
+				11ED122E2AC9C63100831C7F /* InspectionRowsView.swift */,
 				115DCD0C2ACAFD82009DBDE3 /* InformationView.swift */,
+				115DCD0E2ACB04AE009DBDE3 /* InformationRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				115DCD0F2ACB04AE009DBDE3 /* InformationRowView.swift in Sources */,
 				7879AA8C2AC5C51F008ABC5F /* DataBase.swift in Sources */,
 				115DCD0D2ACAFD82009DBDE3 /* InformationView.swift in Sources */,
 				9367BCD92AC3095E00576D08 /* BackgroundView.swift in Sources */,
@@ -233,7 +237,7 @@
 				9367BCD72AC3090700576D08 /* CellView.swift in Sources */,
 				11BB91C52ABE248D00822599 /* CrimeFiles.xcdatamodeld in Sources */,
 				11BB91B92ABE248C00822599 /* CrimeFilesApp.swift in Sources */,
-				11ED122F2AC9C63100831C7F /* InspectionView.swift in Sources */,
+				11ED122F2AC9C63100831C7F /* InspectionRowsView.swift in Sources */,
 				9367BCE52AC6F79400576D08 /* MainBackGroundView.swift in Sources */,
 				9367BCDB2AC3099A00576D08 /* MainView.swift in Sources */,
 				7879AA862AC5C415008ABC5F /* Inspection.swift in Sources */,

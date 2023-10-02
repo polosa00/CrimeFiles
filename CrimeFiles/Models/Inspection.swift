@@ -23,4 +23,5 @@ struct RowInspection {
 struct RowDetailInspection {
     let title: String
     let imageName: String
+    let data: String
 }

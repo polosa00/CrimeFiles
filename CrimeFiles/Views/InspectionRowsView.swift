@@ -1,5 +1,5 @@
 //
-//  InspectionView.swift
+//  InspectionRowsView.swift
 //  CrimeFiles
 //
 //  Created by Александр Полочанин on 1.10.23.
@@ -7,36 +7,46 @@
 
 import SwiftUI
 
-struct InspectionView: View {
+struct InspectionRowsView: View {
     
     @State var viewModel: [RowInspection] = [
         RowInspection(
             title: "Камеры видеонаблюдения",
-            imageName: "klk",
+            imageName: "testImage",
             rowsDetails: [
-                RowDetailInspection(title: "kkk", imageName: "kjj")
+                RowDetailInspection(title: "kkk", imageName: "kjj", data: "test!")
             ],
-            data: "dssdfdsfs")]
+            data: "dssdfdsfs")
+    ]
     @State var title = "Title"
     
     var body: some View {
         NavigationStack {
-            
             ZStack {
                 BackgroundView()
                     .ignoresSafeArea()
-                
                 List(viewModel, id: \.title) { rowInspection in
                     NavigationLink {
+                        
                         if rowInspection.rowsDetails == nil {
-                            InformationView(title: rowInspection.title, mainText: rowInspection.data)
+                            InformationView(
+                                title: rowInspection.title,
+                                mainText: rowInspection.data
+                            )
                         } else {
-                            TestView()
+                            InformationRowView(rowsDetails: rowInspection.rowsDetails ?? [RowDetailInspection(title: "Test", imageName:  "Test", data: "KKK" )],
+                                               title: rowInspection.title
+                            )
+                            
                         }
                     } label: {
-                        CellView(title: rowInspection.title, imageName: rowInspection.imageName)
+                        CellView(
+                            title: rowInspection.title,
+                            imageName: rowInspection.imageName
+                        )
                     }
                     .listRowBackground(Color.clear)
+                    .listRowSeparator(.hidden)
                 }
                 .listStyle(.plain)
                 .padding(.top, 20)
@@ -52,8 +62,8 @@ struct TestView: View {
     }
 }
 
-struct InspectionView_Previews: PreviewProvider {
+struct InspectionRowView_Previews: PreviewProvider {
     static var previews: some View {
-        InspectionView()
+        InspectionRowsView()
     }
 }

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct InformationView: View {
     @State var title = "Title"
-    @State var mainText = "text tesf bngk sjdnfk jsnfkjs dnfkjsdn fkjsnd kfjnsd kjfnskd fnksdjb njkhsb kjsdn cksjdnc kjdsncv kjsnc lankjanbkxt"
+    @State var mainText = "Text text"
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -19,11 +20,10 @@ struct InformationView: View {
                     Text(mainText)
                         .frame(maxWidth: .infinity)
                         .frame(alignment: .center)
+                        .foregroundColor(.black)
                     Spacer()
-                    
                 }
                 .navigationTitle(title)
-                
             }
             .background(Color.clear)
         }

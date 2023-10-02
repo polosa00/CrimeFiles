@@ -25,7 +25,7 @@ struct CellView: View {
                 Spacer()
                 Text(title)
                     .font(.custom("AlegreyaSC-Medium", size: 24))
-//                    .padding(10)
+                    .foregroundColor(.black)
                 Spacer()
             }
             .frame(maxWidth: .infinity)
@@ -44,6 +44,7 @@ struct CellView: View {
                 )
             )
             .cornerRadius(10)
+//            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 5, y: 10)
 //            .padding(0)
         }
         
