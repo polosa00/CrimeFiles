@@ -15,8 +15,8 @@ struct CellView: View {
     
     var body: some View {
         ZStack{
-            HStack{
-                
+            HStack(spacing: 0){
+                Spacer()
                 Spacer()
                 Image(imageName)
                     .resizable()
@@ -28,11 +28,13 @@ struct CellView: View {
                     .lineSpacing(0)
                     .font(.custom("AlegreyaSC-Medium", size: fontSizeForRow))
                     .foregroundColor(.black)
+                    .frame(maxWidth: .infinity)
                 Spacer()
             }
             .frame(maxWidth: .infinity)
             .frame(height: 100)
-            .background(
+            .background{
+                Color.white.opacity(0.2)
                 LinearGradient(
                     gradient: Gradient(
                         colors: [
@@ -44,9 +46,9 @@ struct CellView: View {
                     startPoint: .top,
                     endPoint: .bottom
                 )
-            )
+            }
             .cornerRadius(10)
-//            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 5, y: 10)
+            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 5, y: 15)
 //            .padding(0)
         }
         

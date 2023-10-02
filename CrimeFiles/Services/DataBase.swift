@@ -158,7 +158,7 @@ struct DataBase {
                     title: "Камеры видеонаблюдения",
                     imageName: "CCTVCameras",
                     rowsDetails: nil,
-                    data: "Fill in in the future!"
+                    data: "Fill in in the future! Fill in in the future! Fill in in the future! Fill in in the future! Fill in in the future! Fill in in the future! Fill in in the future! Fill in in the future! Fill in in the future! Fill in in the future! Fill in in the future! Fill in in the future!"
                 )
             ]
         )
