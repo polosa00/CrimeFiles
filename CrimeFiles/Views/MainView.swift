@@ -14,12 +14,13 @@ struct MainView: View {
     var body: some View {
         NavigationStack {
             ZStack{
-                
                 MainBackGroundView()
+//                    .ignoresSafeArea()
                 
                 List(viewModel.inspections, id: \.title) { inspectionDetailViewmodel in
                     NavigationLink {
-                        InspectionView(title: inspectionDetailViewmodel.title)
+//                        InspectionView(title: inspectionDetailViewmodel.title)
+                        InspectionView(viewModel: inspectionDetailViewmodel.rows, title: inspectionDetailViewmodel.title)
                     } label: {
                         CellView(title: inspectionDetailViewmodel.title, imageName: inspectionDetailViewmodel.imageName)
                     }

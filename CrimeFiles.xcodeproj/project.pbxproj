@@ -12,7 +12,6 @@
 		11BB91C02ABE248D00822599 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11BB91BF2ABE248D00822599 /* Preview Assets.xcassets */; };
 		11BB91C52ABE248D00822599 /* CrimeFiles.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11BB91C32ABE248D00822599 /* CrimeFiles.xcdatamodeld */; };
 		11ED122F2AC9C63100831C7F /* InspectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ED122E2AC9C63100831C7F /* InspectionView.swift */; };
-		11ED12312AC9C94A00831C7F /* IncpectionRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ED12302AC9C94A00831C7F /* IncpectionRowViewModel.swift */; };
 		7879AA862AC5C415008ABC5F /* Inspection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7879AA852AC5C415008ABC5F /* Inspection.swift */; };
 		7879AA892AC5C502008ABC5F /* InspectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7879AA882AC5C502008ABC5F /* InspectionViewModel.swift */; };
 		7879AA8C2AC5C51F008ABC5F /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7879AA8B2AC5C51F008ABC5F /* DataBase.swift */; };
@@ -32,7 +31,6 @@
 		11BB91BF2ABE248D00822599 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		11BB91C42ABE248D00822599 /* CrimeFiles.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CrimeFiles.xcdatamodel; sourceTree = "<group>"; };
 		11ED122E2AC9C63100831C7F /* InspectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionView.swift; sourceTree = "<group>"; };
-		11ED12302AC9C94A00831C7F /* IncpectionRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncpectionRowViewModel.swift; sourceTree = "<group>"; };
 		7879AA852AC5C415008ABC5F /* Inspection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inspection.swift; sourceTree = "<group>"; };
 		7879AA882AC5C502008ABC5F /* InspectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionViewModel.swift; sourceTree = "<group>"; };
 		7879AA8B2AC5C51F008ABC5F /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				7879AA882AC5C502008ABC5F /* InspectionViewModel.swift */,
-				11ED12302AC9C94A00831C7F /* IncpectionRowViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -235,7 +232,6 @@
 				11ED122F2AC9C63100831C7F /* InspectionView.swift in Sources */,
 				9367BCE52AC6F79400576D08 /* MainBackGroundView.swift in Sources */,
 				9367BCDB2AC3099A00576D08 /* MainView.swift in Sources */,
-				11ED12312AC9C94A00831C7F /* IncpectionRowViewModel.swift in Sources */,
 				7879AA862AC5C415008ABC5F /* Inspection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,20 +9,21 @@ import SwiftUI
 
 struct InspectionView: View {
     
-    @State var listInspection = ["Row 1", "Row 2", "Row 3", "Row 4"]
-    
+    @State var viewModel: [RowInspection] = [RowInspection(title: "Камеры видеонаблюдения", imageName: "klk")]
     @State var title = "Title"
+    
     var body: some View {
         NavigationStack {
             
             ZStack {
                 BackgroundView()
+                    .ignoresSafeArea()
                 
-                List(listInspection, id: \.self) { rowinspection in
+                List(viewModel, id: \.title) { rowinspection in
                     NavigationLink {
-                        FinishView()
+                        FinishView(title: rowinspection.title)
                     } label: {
-                        Text(rowinspection)
+                        CellView(title: rowinspection.title, imageName: rowinspection.imageName)
                     }
                     .listRowBackground(Color.clear)
                 }
