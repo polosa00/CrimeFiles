@@ -9,7 +9,7 @@ import SwiftUI
 
 struct InformationView: View {
     @State var title = "Title"
-    @State var mainText = "  Text text Text textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText text"
+    @State var mainText = "Text text Text textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText text"
     
     var body: some View {
         ZStack {
@@ -17,10 +17,10 @@ struct InformationView: View {
                 .ignoresSafeArea()
             NavigationStack {
                 ScrollView {
-                    VStack(alignment: .leading, spacing: 8){
+                    VStack(){
                         Text(mainText)
-//                            .frame(maxWidth: .infinity)
-//                            .frame(alignment: .center)
+                            .multilineTextAlignment(.leading)
+                            .frame(maxWidth: .infinity)
                             .foregroundColor(.white)
                             .padding(.top,20)
                             .padding()
@@ -32,6 +32,7 @@ struct InformationView: View {
                     .cornerRadius(15)
                     .navigationTitle(title)
                     .padding()
+                    .shadow(color: .gray.opacity(0.6) ,radius: 10, x: 5, y: 15)
                     
                 }
             }
