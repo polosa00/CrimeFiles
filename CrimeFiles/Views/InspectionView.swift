@@ -9,7 +9,14 @@ import SwiftUI
 
 struct InspectionView: View {
     
-    @State var viewModel: [RowInspection] = [RowInspection(title: "Камеры видеонаблюдения", imageName: "klk")]
+    @State var viewModel: [RowInspection] = [
+        RowInspection(
+            title: "Камеры видеонаблюдения",
+            imageName: "klk",
+            rowsDetails: [
+                RowDetailInspection(title: "kkk", imageName: "kjj")
+            ],
+            data: "dssdfdsfs")]
     @State var title = "Title"
     
     var body: some View {
@@ -21,7 +28,11 @@ struct InspectionView: View {
                 
                 List(viewModel, id: \.title) { rowInspection in
                     NavigationLink {
-                        FinishView(title: rowInspection.title)
+                        if rowInspection.rowsDetails == nil {
+                            InformationView(title: rowInspection.title, mainText: rowInspection.data)
+                        } else {
+                            TestView()
+                        }
                     } label: {
                         CellView(title: rowInspection.title, imageName: rowInspection.imageName)
                     }
@@ -30,15 +41,14 @@ struct InspectionView: View {
                 .listStyle(.plain)
                 .padding(.top, 20)
                 .navigationTitle(title)
-        }
+            }
         }
     }
 }
 
-struct FinishView: View {
-    @State var title = ""
+struct TestView: View {
     var body: some View {
-        Text(title)
+        Text("testView")
     }
 }
 

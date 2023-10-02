@@ -15,31 +15,53 @@ struct DataBase {
             rows: [
                 RowInspection(
                     title: "Общие положения осмотра места происшествия",
-                    imageName: ""
+                    imageName: "",
+                    rowsDetails: [
+                        RowDetailInspection(title: "This is test details Row", imageName: "Blal"),
+                        RowDetailInspection(title: "This is test details Row", imageName: "Blal"),
+                        RowDetailInspection(title: "This is test details Row", imageName: "Blal"),
+                        RowDetailInspection(title: "This is test details Row", imageName: "Blal")
+                    ],
+                    data: "sdfsdfsdfsdf"
+                
                 ),
                 RowInspection(
                     title: "Обеспечение готовности к выезду на место происшествия",
-                    imageName: ""
+                    imageName: "",
+                    rowsDetails: nil,
+                    data: "dsfsdfsdfsdfkjndkj"
                 ),
                 RowInspection(
                     title: "Действия следователя при получении сообщения о преступлении",
-                    imageName: ""
+                    imageName: "",
+                    rowsDetails: nil,
+                    data: "dsfjknskdjfnskdjfnbs"
+                    
                 ),
                 RowInspection(
                     title: "Действия по прибытии на место происшествия",
-                    imageName: ""
+                    imageName: "",
+                    rowsDetails: nil,
+                    data: "dsfjknskdjfnskdjfnbs"
                 ),
                 RowInspection(
                     title: "Обязательные участники осмотра места происшествия",
-                    imageName: ""
+                    imageName: "",
+                    rowsDetails: nil,
+                    data: "dsfjknskdjfnskdjfnbs"
                 ),
                 RowInspection(
                     title: "Дополнительные участники осмотра места происшествия",
-                    imageName: ""
+                    imageName: "",
+                    rowsDetails: nil,
+                    data: "dsfjknskdjfnskdjfnbs"
+                    
                 ),
                 RowInspection(
                     title: "Определение границ осмотра места происшествия",
-                    imageName: ""
+                    imageName: "",
+                    rowsDetails: nil,
+                    data: "dsfjknskdjfnskdjfnbs"
                 )
             ]
         ),
@@ -49,35 +71,52 @@ struct DataBase {
             rows: [
                 RowInspection(
                     title: "Осмотр жилища",
-                    imageName: ""
+                    imageName: "",
+                    rowsDetails: nil,
+                    data: "dsfjknskdjfnskdjfnbs"
+                    
                 ),
                 RowInspection(
                     title: "Осмотр участка местности",
-                    imageName: ""
+                    imageName: "",
+                    rowsDetails: nil,
+                    data: "dsfjknskdjfnskdjfnbs"
                 ),
                 RowInspection(
                     title: "Осмотр трупа",
-                    imageName: ""
+                    imageName: "",
+                    rowsDetails: nil,
+                    data: "dsfjknskdjfnskdjfnbs"
                 ),
                 RowInspection(
                     title: "Осмотр транспортного средства",
-                    imageName: ""
+                    imageName: "",
+                    rowsDetails: nil,
+                    data: "dsfjknskdjfnskdjfnbs"
                 ),
                 RowInspection(
                     title: "Осмотр и изъятие следов крови",
-                    imageName: ""
+                    imageName: "",
+                    rowsDetails: nil,
+                    data: "dsfjknskdjfnskdjfnbs"
                 ),
                 RowInspection(
                     title: "Работа с запаховыми следами",
-                    imageName: ""
+                    imageName: "",
+                    rowsDetails: nil,
+                    data: "dsfjknskdjfnskdjfnbs"
                 ),
                 RowInspection(
                     title: "Работа со следами рук, ног",
-                    imageName: ""
+                    imageName: "",
+                    rowsDetails: nil,
+                    data: "sdkjfhsdiughisuhckjvbisuhriufgh"
                 ),
                 RowInspection(
                     title: "Работа с орудиями преступления",
-                    imageName: ""
+                    imageName: "",
+                    rowsDetails: nil,
+                    data: "sdkjfhsdiughisuhckjvbisuhriufgh"
                 )
             ]
         ),
@@ -87,27 +126,39 @@ struct DataBase {
             rows: [
                 RowInspection(
                     title: "Описание, измерения, привязки обьектов и следов",
-                    imageName: ""
+                    imageName: "",
+                    rowsDetails: nil,
+                    data: "sdkjfhsdiughisuhckjvbisuhriufgh"
                 ),
                 RowInspection(
                     title: "Изъятие и упаковка объектов и следов",
-                    imageName: ""
+                    imageName: "",
+                    rowsDetails: nil,
+                    data: "sdkjfhsdiughisuhckjvbisuhriufgh"
                 ),
                 RowInspection(
                     title: "Составление планов и схем",
-                    imageName: ""
+                    imageName: "",
+                    rowsDetails: nil,
+                    data: "sdkjfhsdiughisuhckjvbisuhriufgh"
                 ),
                 RowInspection(
                     title: "Фотосъемка",
-                    imageName: ""
+                    imageName: "",
+                    rowsDetails: nil,
+                    data: "sdkjfhsdiughisuhckjvbisuhriufgh"
                 ),
                 RowInspection(
                     title: "Структура протокола осмотра места происшествия",
-                    imageName: ""
+                    imageName: "",
+                    rowsDetails: nil,
+                    data: "sdkjfhsdiughisuhckjvbisuhriufgh"
                 ),
                 RowInspection(
                     title: "Камеры видеонаблюдения",
-                    imageName: ""
+                    imageName: "",
+                    rowsDetails: nil,
+                    data: "sdkjfhsdiughisuhckjvbisuhriufgh"
                 )
             ]
         )
