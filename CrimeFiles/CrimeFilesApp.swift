@@ -8,6 +8,7 @@
 import SwiftUI
 
 @main
+
 struct CrimeFilesApp: App {
     var body: some Scene {
         WindowGroup {
