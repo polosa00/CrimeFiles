@@ -35,9 +35,7 @@ struct MainView: View {
                 }
                 .padding(.top, 150)
                 .listStyle(.plain) // Устанавливаем стиль списка на plain
-            
             }
-            
         }
     }
 }

@@ -24,7 +24,7 @@ struct CellView: View {
                 Spacer()
                 Spacer()
                 Text(title)
-                    .multilineTextAlignment(.leading)
+                    .multilineTextAlignment(.center)
                     .lineSpacing(0)
                     .font(.custom("AlegreyaSC-Medium", size: fontSizeForRow))
                     .foregroundColor(.black)
