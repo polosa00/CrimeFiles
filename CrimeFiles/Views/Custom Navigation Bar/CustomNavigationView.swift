@@ -7,36 +7,36 @@
 
 import SwiftUI
 
-struct CustomNavigationView<Content: View>: View {
-    
-    let content: Content
-    
-    init(@ViewBuilder content: () -> Content) {
-        self.content = content()
-    }
-    
-    var body: some View {
-        NavigationView {
-            CustomNavigationBarContainerView{
-                content
-            }
-            .navigationBarHidden(true)
-        }
-        .navigationViewStyle(.stack)
-    }
-}
-
-struct CustomNavigationView_Previews: PreviewProvider {
-    static var previews: some View {
-        CustomNavigationView {
-            Color.red.ignoresSafeArea()
-        }
-    }
-}
-
-extension UINavigationController {
-    open override func viewDidLoad() {
-        super.viewDidLoad()
-        interactivePopGestureRecognizer?.delegate = nil
-    }
-}
+//struct CustomNavigationView<Content: View>: View {
+//    
+//    let content: Content
+//    
+//    init(@ViewBuilder content: () -> Content) {
+//        self.content = content()
+//    }
+//    
+//    var body: some View {
+//        NavigationView {
+//            CustomNavigationBarContainerView{
+//                content
+//            }
+//            .navigationBarHidden(true)
+//        }
+//        .navigationViewStyle(.stack)
+//    }
+//}
+//
+//struct CustomNavigationView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CustomNavigationView {
+//            Color.red.ignoresSafeArea()
+//        }
+//    }
+//}
+//
+//extension UINavigationController {
+//    open override func viewDidLoad() {
+//        super.viewDidLoad()
+//        interactivePopGestureRecognizer?.delegate = nil
+//    }
+//}
