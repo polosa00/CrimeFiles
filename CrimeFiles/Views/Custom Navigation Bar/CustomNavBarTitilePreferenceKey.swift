@@ -18,9 +18,9 @@ struct CustomNavBarTitilePreferenceKey: PreferenceKey {
 }
 
 struct CustomNavBarImagePreferenceKey: PreferenceKey {
-    static var defaultValue: String? = nil
+    static var defaultValue: String = ""
     
-    static func reduce(value: inout String?, nextValue: () -> String?) {
+    static func reduce(value: inout String, nextValue: () -> String) {
         value = nextValue()
     }
 }
@@ -38,7 +38,7 @@ extension View {
             .preference(key: CustomNavBarTitilePreferenceKey.self, value: title)
     }
     
-    func customNavigationImage(_ imageName: String?) -> some View {
+    func customNavigationImage(_ imageName: String) -> some View {
         self
             .preference(key: CustomNavBarImagePreferenceKey.self, value: imageName)
     }
@@ -49,7 +49,7 @@ extension View {
     }
     
     // combine above three functions
-    func customNavBarItems(title: String = "", imageName: String? = nil, backButtonHidden: Bool = false) -> some View {
+    func customNavBarItems(title: String = "", imageName: String = "", backButtonHidden: Bool = false) -> some View {
         self
             .customNavigationTile(title)
             .customNavigationImage(imageName)

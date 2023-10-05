@@ -33,7 +33,7 @@ struct CustomNavigationBarContainerView<Content: View>: View {
             self.title = value
         }
         .onPreferenceChange(CustomNavBarImagePreferenceKey.self) { value in
-            self.imageName = value ?? "" //возможно здесь ошибка
+            self.imageName = value  //возможно здесь ошибка
         }
         .onPreferenceChange(CustomNavBarBackButtonHiddenPreferenceKey.self) { value in
             self.showBackButton = !value
@@ -50,6 +50,7 @@ struct CustomNavigationBarContainerView_Previews: PreviewProvider {
                 Text("Hello")
                     .foregroundColor(.white)
                     .customNavigationTile("New Title")
+                    .customNavigationImage("detective")
                    
                     .customNavigationBarBackButtonHidden(true)
             }

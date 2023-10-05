@@ -12,7 +12,7 @@ struct MainView: View {
     @StateObject private var viewModel = InspectionViewModel()
     
     var body: some View {
-        NavigationStack {
+        CustomNavigationView {
             ZStack{
                 MainBackGroundView()
                     .ignoresSafeArea()
