@@ -19,6 +19,8 @@ struct AppNavigationBarView: View {
                     Text("Navigate")
                 }
             }
+            .customNavigationTile("Title")
+            .customNavigationImage("detective")
         }
     }
 }

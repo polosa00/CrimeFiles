@@ -31,8 +31,9 @@ struct MainView: View {
                     }
                     .listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)
-                    
                 }
+                .customNavigationTile("hjfhgf")
+                .customNavigationImage("detective")
                 .padding(.top, 150)
                 .listStyle(.plain) // Устанавливаем стиль списка на plain
             }
