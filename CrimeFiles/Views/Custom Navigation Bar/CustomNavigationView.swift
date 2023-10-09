@@ -16,20 +16,30 @@ struct CustomNavigationView<Content: View>: View {
     }
     
     var body: some View {
-        NavigationView {
-            CustomNavigationBarContainerView{
-                content
+        ZStack {
+        
+            NavigationView {
+                ZStack {
+                    
+                    
+                    MainBackGroundView().ignoresSafeArea()
+                    CustomNavigationBarContainerView{
+                        content
+                    }
+                    .navigationBarHidden(true)
+                    .background(Color.clear)
+                    
+                }
+                .navigationViewStyle(.stack)
             }
-            .navigationBarHidden(true)
         }
-        .navigationViewStyle(.stack)
     }
 }
 
 struct CustomNavigationView_Previews: PreviewProvider {
     static var previews: some View {
         CustomNavigationView {
-            Color.red.ignoresSafeArea()
+            Color.clear
         }
     }
 }

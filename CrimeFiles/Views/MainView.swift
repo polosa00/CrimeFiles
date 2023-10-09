@@ -12,30 +12,38 @@ struct MainView: View {
     @StateObject private var viewModel = InspectionViewModel()
     
     var body: some View {
-        CustomNavigationView {
-            ZStack{
-                MainBackGroundView()
-                    .ignoresSafeArea()
-                
-                List(viewModel.inspections, id: \.title) { inspectionDetailViewmodel in
-                    NavigationLink {
-                        InspectionRowsView(
-                            viewModel: inspectionDetailViewmodel.rows,
-                            title: inspectionDetailViewmodel.title
-                        )
-                    } label: {
-                        CellView(
-                            title: inspectionDetailViewmodel.title,
-                            imageName: inspectionDetailViewmodel.imageName
-                        )
+        ZStack {
+             
+          
+            
+            
+            CustomNavigationView {
+                ZStack{
+//                    MainBackGroundView()
+//                        .ignoresSafeArea()
+
+
+                    List(viewModel.inspections, id: \.title) { inspectionDetailViewmodel in
+                        NavigationLink {
+                            InspectionRowsView(
+                                viewModel: inspectionDetailViewmodel.rows,
+                                title: inspectionDetailViewmodel.title
+                            )
+                        } label: {
+                            CellView(
+                                title: inspectionDetailViewmodel.title,
+                                imageName: inspectionDetailViewmodel.imageName
+                            )
+                        }
+                        .listRowBackground(Color.clear)
+                        .listRowSeparator(.hidden)
                     }
-                    .listRowBackground(Color.clear)
-                    .listRowSeparator(.hidden)
+//                    .customNavigationTile("hjfhgf")
+//                    .customNavigationImage("detective")
+                    .padding(.top, 30)
+                    .listStyle(.plain) // Устанавливаем стиль списка на plain
                 }
-                .customNavigationTile("hjfhgf")
-                .customNavigationImage("detective")
-                .padding(.top, 150)
-                .listStyle(.plain) // Устанавливаем стиль списка на plain
+                .customNavigationBarBackButtonHidden(true)
             }
         }
     }

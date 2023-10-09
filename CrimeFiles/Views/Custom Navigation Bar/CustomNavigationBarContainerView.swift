@@ -20,23 +20,30 @@ struct CustomNavigationBarContainerView<Content: View>: View {
     }
     
     var body: some View {
-        VStack(spacing: 0){
-            CustomNavigationBarView(
-                showBackButton: showBackButton,
-                title: title,
-                imageName: imageName
-            )
-            content
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-        }
-        .onPreferenceChange(CustomNavBarTitilePreferenceKey.self) { value in
-            self.title = value
-        }
-        .onPreferenceChange(CustomNavBarImagePreferenceKey.self) { value in
-            self.imageName = value  //возможно здесь ошибка
-        }
-        .onPreferenceChange(CustomNavBarBackButtonHiddenPreferenceKey.self) { value in
-            self.showBackButton = !value
+        ZStack {
+            Color.clear // Color for backgraound
+            
+            
+            VStack(spacing: 0){
+                CustomNavigationBarView(
+                    showBackButton: showBackButton,
+                    title: title,
+                    imageName: imageName
+                )
+                .background(Color.clear.ignoresSafeArea())
+                content
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+            }
+            .background(Color.clear)
+            .onPreferenceChange(CustomNavBarTitilePreferenceKey.self) { value in
+                self.title = value
+            }
+            .onPreferenceChange(CustomNavBarImagePreferenceKey.self) { value in
+                self.imageName = value
+            }
+            .onPreferenceChange(CustomNavBarBackButtonHiddenPreferenceKey.self) { value in
+                self.showBackButton = !value
+            }
         }
     }
 }
