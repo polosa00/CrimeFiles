@@ -40,21 +40,20 @@ struct InformationRowView: View {
         .toolbar {
             ToolbarItemGroup(placement: .navigationBarLeading) {
                 VStack {
-                        HStack {
-//                        Image(imageTitle)
-//                            .resizable()
-//                            .frame(width: 55, height: 55)
+                    HStack {
+                        //                        Image(imageTitle)
+                        //                            .resizable()
+                        //                            .frame(width: 55, height: 55)
                         Text(title)
-                            .font(.title3)
-                            .foregroundColor(.black)
+                            .font(.custom("AlegreyaSC-Medium", size: 22))
                             .bold()
-                            .frame(maxHeight: .infinity)
+//                            .frame(maxHeight: 100)
+                            .foregroundColor(.black)
                             .lineLimit(nil)
-                        
                     }
-                    
                 }
-                .frame(height: 105)
+                .frame(height: 90)
+                .background(.red)
                 
                 
             }

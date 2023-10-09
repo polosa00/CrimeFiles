@@ -9,7 +9,7 @@ import SwiftUI
 
 struct InformationView: View {
     @State var title = "Title"
-    @State var mainText = "Text text Text textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText textText text"
+    @State var mainText = "Text"
     
     var body: some View {
         ZStack {
@@ -22,7 +22,7 @@ struct InformationView: View {
                             .multilineTextAlignment(.leading)
                             .frame(maxWidth: .infinity)
                             .foregroundColor(.white)
-                            .padding(.top,20)
+                            .padding(.top)
                             .padding()
                         Spacer()
                     }
@@ -30,39 +30,34 @@ struct InformationView: View {
                         Color.gray.opacity(0.8)
                     })
                     .cornerRadius(15)
-//                    .navigationTitle(title)
-                    .padding()
+                    .padding(.horizontal, 10)
                     .shadow(color: .gray.opacity(0.6) ,radius: 10, x: 5, y: 15)
                     
                 }
             }
             .navigationBarTitleDisplayMode(.large)
+            
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarLeading) {
+                    
                     VStack {
-                            HStack {
-//                            Image("detective")
-//                                .resizable()
-//                                .frame(width: 55, height: 55)
-                            Text(title)
-                                .font(.title3)
-                                .foregroundColor(.black)
-                                .bold()
-                                .frame(maxHeight: .infinity)
-                                .lineLimit(nil)
+                        HStack {
                             
+                            Text(title)
+                                .font(.custom("AlegreyaSC-Medium", size: 22))
+                                .bold()
+                                .frame(maxHeight: 100)
+                                .foregroundColor(.black)
+                                .lineLimit(nil)
                         }
                         .frame(height: 105)
-
-                        
-                        
                     }
                     .frame(height: 105)
                     
                     
                 }
                 
-
+                
             }
         }
     }

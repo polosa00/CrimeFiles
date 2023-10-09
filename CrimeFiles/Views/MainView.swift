@@ -17,8 +17,6 @@ struct MainView: View {
     
     var body: some View {
         ZStack {
-             
-          
             NavigationStack {
                 ZStack{
                     
@@ -29,13 +27,15 @@ struct MainView: View {
                         
                         
                         NavigationLink {
+                            
                             InspectionRowsView(
                                 viewModel: inspectionDetailViewmodel.rows,
                                 title: inspectionDetailViewmodel.title,
                                 imageTitle: inspectionDetailViewmodel.titleImage
-                                
                             )
+                            
                         } label: {
+                            
                             CellView(
                                 title: inspectionDetailViewmodel.title,
                                 imageName: inspectionDetailViewmodel.imageName
@@ -44,16 +44,40 @@ struct MainView: View {
                         .listRowBackground(Color.clear)
                         .listRowSeparator(.hidden)
                     }
-//                    .customNavigationTile("hjfhgf")
-//                    .customNavigationImage("detective")
-                    .padding(.top, 130)
-                    .listStyle(.plain) // Устанавливаем стиль списка на plain
+                    .padding(.top, 100)
+                    .listStyle(.plain)
                 }
-                .customNavigationBarBackButtonHidden(true)
+                .customNavigationBarBackButtonHidden(false)
             }
             .tint(.black)
-            
-            
+            .toolbar {
+                ToolbarItemGroup(placement: .navigationBarLeading) {
+    //
+                    
+                    HStack {
+                        
+    //                    Image(imageTitle)
+    //                        .resizable()
+    //                        .aspectRatio(contentMode: .fit)
+//                        Text(title)
+//                            .font(.custom("AlegreyaSC-Medium", size: 22))
+//                            .bold()
+//    //                        .frame(maxHeight: 70)
+//                            .foregroundColor(.black)
+//                            .lineLimit(nil)
+                        
+                    }
+                    .frame(height: 90)  // строка не съедается
+    //                .padding(.top, 30)
+                    
+                    
+                    
+
+                    
+                    
+                }
+                
+            }
         }
     }
 }

@@ -36,8 +36,9 @@ struct InspectionRowsView: View {
                                 mainText: rowInspection.data
                             )
                         } else {
-                            InformationRowView(rowsDetails: rowInspection.rowsDetails ?? [RowDetailInspection(title: "Test", imageName:  "Test", data: "KKK" )],
-                                               title: rowInspection.title
+                            InformationRowView(rowsDetails: rowInspection.rowsDetails ??
+                                [RowDetailInspection(title: "Test", imageName:  "Test", data: "KKK" )],
+                            title: rowInspection.title
                             )
                             
                         }
@@ -52,60 +53,36 @@ struct InspectionRowsView: View {
                     .listRowSeparator(.hidden)
                 }
                 .listStyle(.plain)
-//                .padding(.top, -20)
-//                .frame(height: 44)
-                .navigationBarBackButtonHidden(false)
             }
         }
         .tint(.black)
         .navigationBarTitleDisplayMode(.large)
         .toolbar {
             ToolbarItemGroup(placement: .navigationBarLeading) {
-                VStack {
-                    HStack {
-                        Image(imageTitle)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                        Text(title)
-                            .font(.title3)
-                            .foregroundColor(.black)
-                            .bold()
-                            .frame(maxHeight: .infinity)
-                            .lineLimit(nil)
-                        
-                    }
+                HStack {
+                    
+//                    Image(imageTitle)
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fit)
+                    Text(title)
+                        .font(.custom("AlegreyaSC-Medium", size: 22))
+                        .bold()
+//                        .frame(maxHeight: 70)
+                        .foregroundColor(.black)
+                        .lineLimit(nil)
                     
                 }
-                .frame(height: 80)
+                .frame(height: 90)  // строка не съедается
+//                .padding(.top, 30)
+                
+                
+                
+
                 
                 
             }
             
         }
-//        .toolbar {
-//            ToolbarItemGroup(placement: .navigationBarLeading) {
-//                VStack {
-//                        HStack {
-//                        Image("detective")
-//                            .resizable()
-//                            .aspectRatio(contentMode: .fit)
-//                        Text(title)
-//                            .font(.title3)
-//                            .foregroundColor(.black)
-//                            .bold()
-//                            .frame(maxHeight: .infinity)
-//                            .lineLimit(nil)
-//
-//                    }
-//
-//                }
-//                .frame(height: 80)
-//
-//
-//            }
-//
-//
-//        }
     }
 }
 
