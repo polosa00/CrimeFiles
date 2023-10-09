@@ -30,11 +30,39 @@ struct InformationView: View {
                         Color.gray.opacity(0.8)
                     })
                     .cornerRadius(15)
-                    .navigationTitle(title)
+//                    .navigationTitle(title)
                     .padding()
                     .shadow(color: .gray.opacity(0.6) ,radius: 10, x: 5, y: 15)
                     
                 }
+            }
+            .navigationBarTitleDisplayMode(.large)
+            .toolbar {
+                ToolbarItemGroup(placement: .navigationBarLeading) {
+                    VStack {
+                            HStack {
+//                            Image("detective")
+//                                .resizable()
+//                                .frame(width: 55, height: 55)
+                            Text(title)
+                                .font(.title3)
+                                .foregroundColor(.black)
+                                .bold()
+                                .frame(maxHeight: .infinity)
+                                .lineLimit(nil)
+                            
+                        }
+                        .frame(height: 105)
+
+                        
+                        
+                    }
+                    .frame(height: 105)
+                    
+                    
+                }
+                
+
             }
         }
     }

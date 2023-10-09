@@ -152,8 +152,8 @@
 				9367BCDA2AC3099A00576D08 /* MainView.swift */,
 				9367BCE42AC6F79400576D08 /* MainBackGroundView.swift */,
 				11ED122E2AC9C63100831C7F /* InspectionRowsView.swift */,
-				115DCD0C2ACAFD82009DBDE3 /* InformationView.swift */,
 				115DCD0E2ACB04AE009DBDE3 /* InformationRowView.swift */,
+				115DCD0C2ACAFD82009DBDE3 /* InformationView.swift */,
 				9326F8322ACD6A4E001E99E2 /* Custom Navigation Bar */,
 			);
 			path = Views;

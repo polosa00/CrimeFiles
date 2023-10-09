@@ -22,7 +22,7 @@ struct CustomNavigationView<Content: View>: View {
                 ZStack {
                     
                     
-                    MainBackGroundView().ignoresSafeArea()
+                    BackgroundView().ignoresSafeArea()
                     CustomNavigationBarContainerView{
                         content
                     }

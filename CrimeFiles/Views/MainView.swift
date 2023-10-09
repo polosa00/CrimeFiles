@@ -9,25 +9,31 @@ import SwiftUI
 
 struct MainView: View {
     
+//    let fontSizeForRow: CGFloat = 20
+//    let title: String
+//    let imageName: String
+    
     @StateObject private var viewModel = InspectionViewModel()
     
     var body: some View {
         ZStack {
              
           
-            
-            
-            CustomNavigationView {
+            NavigationStack {
                 ZStack{
-//                    MainBackGroundView()
-//                        .ignoresSafeArea()
-
+                    
+                    MainBackGroundView()
+                        .ignoresSafeArea()
 
                     List(viewModel.inspections, id: \.title) { inspectionDetailViewmodel in
+                        
+                        
                         NavigationLink {
                             InspectionRowsView(
                                 viewModel: inspectionDetailViewmodel.rows,
-                                title: inspectionDetailViewmodel.title
+                                title: inspectionDetailViewmodel.title,
+                                imageTitle: inspectionDetailViewmodel.titleImage
+                                
                             )
                         } label: {
                             CellView(
@@ -40,11 +46,14 @@ struct MainView: View {
                     }
 //                    .customNavigationTile("hjfhgf")
 //                    .customNavigationImage("detective")
-                    .padding(.top, 30)
+                    .padding(.top, 130)
                     .listStyle(.plain) // Устанавливаем стиль списка на plain
                 }
                 .customNavigationBarBackButtonHidden(true)
             }
+            .tint(.black)
+            
+            
         }
     }
 }

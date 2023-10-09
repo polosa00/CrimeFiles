@@ -19,6 +19,7 @@ struct InspectionRowsView: View {
             data: "dssdfdsfs")
     ]
     @State var title = "Title"
+    @State var imageTitle = "ii"
     
     var body: some View {
         NavigationStack {
@@ -26,6 +27,7 @@ struct InspectionRowsView: View {
                 BackgroundView()
                     .ignoresSafeArea()
                 List(viewModel, id: \.title) { rowInspection in
+                   
                     NavigationLink {
                         
                         if rowInspection.rowsDetails == nil {
@@ -50,10 +52,60 @@ struct InspectionRowsView: View {
                     .listRowSeparator(.hidden)
                 }
                 .listStyle(.plain)
-                .padding(.top, 20)
-                .navigationTitle(title)
+//                .padding(.top, -20)
+//                .frame(height: 44)
+                .navigationBarBackButtonHidden(false)
             }
         }
+        .tint(.black)
+        .navigationBarTitleDisplayMode(.large)
+        .toolbar {
+            ToolbarItemGroup(placement: .navigationBarLeading) {
+                VStack {
+                    HStack {
+                        Image(imageTitle)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                        Text(title)
+                            .font(.title3)
+                            .foregroundColor(.black)
+                            .bold()
+                            .frame(maxHeight: .infinity)
+                            .lineLimit(nil)
+                        
+                    }
+                    
+                }
+                .frame(height: 80)
+                
+                
+            }
+            
+        }
+//        .toolbar {
+//            ToolbarItemGroup(placement: .navigationBarLeading) {
+//                VStack {
+//                        HStack {
+//                        Image("detective")
+//                            .resizable()
+//                            .aspectRatio(contentMode: .fit)
+//                        Text(title)
+//                            .font(.title3)
+//                            .foregroundColor(.black)
+//                            .bold()
+//                            .frame(maxHeight: .infinity)
+//                            .lineLimit(nil)
+//
+//                    }
+//
+//                }
+//                .frame(height: 80)
+//
+//
+//            }
+//
+//
+//        }
     }
 }
 
@@ -65,6 +117,6 @@ struct TestView: View {
 
 struct InspectionRowView_Previews: PreviewProvider {
     static var previews: some View {
-        InspectionRowsView()
+        InspectionRowsView(title: "Камеры видеонаблюдения")
     }
 }

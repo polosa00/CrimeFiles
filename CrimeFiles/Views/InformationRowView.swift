@@ -12,6 +12,7 @@ struct InformationRowView: View {
         RowDetailInspection(title: "Text title", imageName: "testImage", data: "Fill in in the future!")
     ]
     @State var title = "Title"
+    @State var imageTitle = "ii"
     
     var body: some View {
         
@@ -33,9 +34,35 @@ struct InformationRowView: View {
                 }
                 .listStyle(.plain)
             }
-            .navigationTitle(title)
+//            .navigationTitle(title)
+        }
+        .navigationBarTitleDisplayMode(.large)
+        .toolbar {
+            ToolbarItemGroup(placement: .navigationBarLeading) {
+                VStack {
+                        HStack {
+//                        Image(imageTitle)
+//                            .resizable()
+//                            .frame(width: 55, height: 55)
+                        Text(title)
+                            .font(.title3)
+                            .foregroundColor(.black)
+                            .bold()
+                            .frame(maxHeight: .infinity)
+                            .lineLimit(nil)
+                        
+                    }
+                    
+                }
+                .frame(height: 105)
+                
+                
+            }
+            
+
         }
     }
+    
 }
 
 struct InformationRowView_Previews: PreviewProvider {

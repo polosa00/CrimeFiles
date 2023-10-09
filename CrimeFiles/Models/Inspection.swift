@@ -10,6 +10,7 @@ import SwiftUI
 struct Inspection {
     let title: String
     let imageName: String
+    let titleImage: String
     let rows: [RowInspection]
 }
 

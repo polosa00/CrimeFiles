@@ -12,6 +12,7 @@ struct DataBase {
         Inspection(
             title: "Подготовка к осмотру места происшествия",
             imageName: "PreparingForInspect",
+            titleImage: "detective",
             rows: [
                 RowInspection(
                     title: "Общие положения осмотра места происшествия",
@@ -68,6 +69,7 @@ struct DataBase {
         Inspection(
             title: "Осмотры по обьектам",
             imageName: "InspectionsByObjects",
+            titleImage: "detective2",
             rows: [
                 RowInspection(
                     title: "Осмотр жилища",
@@ -123,6 +125,7 @@ struct DataBase {
         Inspection(
             title: "Отдельные следственные действия при осмотре",
             imageName: "SeperateActionsDuringInspections",
+            titleImage: "detective3",
             rows: [
                 RowInspection(
                     title: "Описание, измерения, привязки обьектов и следов",

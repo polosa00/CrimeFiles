@@ -11,6 +11,7 @@ struct MainBackGroundView: View {
     var body: some View {
         ZStack{
             BackgroundView()
+                .ignoresSafeArea()
             VStack{
                 HStack{
                     Image("clip")
