@@ -19,32 +19,34 @@ struct InformationView: View {
                 ScrollView {
                     VStack(){
                         Text(mainText)
+//                            .bold()
                             .multilineTextAlignment(.leading)
                             .frame(maxWidth: .infinity)
-                            .foregroundColor(.white)
+                            .foregroundColor(.black)
                             .padding(.top)
                             .padding()
                         Spacer()
                     }
                     .background(content: {
-                        Color.gray.opacity(0.8)
+                        Color.gray.opacity(0.3)
                     })
                     .cornerRadius(15)
                     .padding(.horizontal, 10)
-                    .shadow(color: .gray.opacity(0.6) ,radius: 10, x: 5, y: 15)
+                    .shadow(color: .white.opacity(0.8) ,radius: 10, x: 5, y: 15)
                     
                 }
             }
-            .navigationBarTitleDisplayMode(.large)
+            .navigationBarTitleDisplayMode(.inline)
             
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarLeading) {
-                    
+
                     VStack {
                         HStack {
-                            
+
                             Text(title)
                                 .font(.custom("AlegreyaSC-Medium", size: 22))
+//                                .lineSpacing(-10)
                                 .bold()
                                 .frame(maxHeight: 100)
                                 .foregroundColor(.black)
@@ -53,8 +55,8 @@ struct InformationView: View {
                         .frame(height: 105)
                     }
                     .frame(height: 105)
-                    
-                    
+
+
                 }
                 
                 

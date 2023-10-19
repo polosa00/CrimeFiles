@@ -15,7 +15,7 @@ struct CellView: View {
     
     var body: some View {
         ZStack{
-            HStack(spacing: 0){
+            HStack(){
                 Spacer()
                 Spacer()
                 Image(imageName)
@@ -24,7 +24,7 @@ struct CellView: View {
                 Spacer()
                 Spacer()
                 Text(title)
-                    .multilineTextAlignment(.center)
+                    .multilineTextAlignment(.center) // ровняет все элементы в строках 
                     .lineSpacing(0)
                     .font(.custom("AlegreyaSC-Medium", size: fontSizeForRow))
                     .foregroundColor(.black)

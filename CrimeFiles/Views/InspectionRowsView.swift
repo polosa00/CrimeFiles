@@ -9,6 +9,8 @@ import SwiftUI
 
 struct InspectionRowsView: View {
     
+    //поменять на @ObservedObject
+    
     @State var viewModel: [RowInspection] = [
         RowInspection(
             title: "Камеры видеонаблюдения",
@@ -67,6 +69,8 @@ struct InspectionRowsView: View {
                     Text(title)
                         .font(.custom("AlegreyaSC-Medium", size: 22))
                         .bold()
+                        .lineSpacing(0)
+//                        .lineLimit(<#T##number: Int?##Int?#>)
 //                        .frame(maxHeight: 70)
                         .foregroundColor(.black)
                         .lineLimit(nil)

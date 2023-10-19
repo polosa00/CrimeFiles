@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct InformationRowView: View {
+    
+    //поменять на @ObservedObject
     @State var rowsDetails: [RowDetailInspection] = [
         RowDetailInspection(title: "Text title", imageName: "testImage", data: "Fill in in the future!")
     ]
@@ -40,20 +42,14 @@ struct InformationRowView: View {
         .toolbar {
             ToolbarItemGroup(placement: .navigationBarLeading) {
                 VStack {
-                    HStack {
-                        //                        Image(imageTitle)
-                        //                            .resizable()
-                        //                            .frame(width: 55, height: 55)
+                
                         Text(title)
                             .font(.custom("AlegreyaSC-Medium", size: 22))
                             .bold()
-//                            .frame(maxHeight: 100)
                             .foregroundColor(.black)
                             .lineLimit(nil)
-                    }
                 }
                 .frame(height: 90)
-                .background(.red)
                 
                 
             }

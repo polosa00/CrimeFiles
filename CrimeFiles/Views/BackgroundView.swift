@@ -11,7 +11,7 @@ struct BackgroundView: View {
     var body: some View {
         Image("bg")
             .resizable()
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+//            .frame(maxWidth: .infinity, maxHeight: .infinity)
             .ignoresSafeArea()
     }
 }

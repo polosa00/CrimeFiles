@@ -11,4 +11,8 @@ final class InspectionViewModel: ObservableObject {
     
    @Published var inspections = DataBase().inspections
     
+    
+    
+    
+    
 }

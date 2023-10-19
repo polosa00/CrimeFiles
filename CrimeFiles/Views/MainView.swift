@@ -24,10 +24,7 @@ struct MainView: View {
                         .ignoresSafeArea()
 
                     List(viewModel.inspections, id: \.title) { inspectionDetailViewmodel in
-                        
-                        
                         NavigationLink {
-                            
                             InspectionRowsView(
                                 viewModel: inspectionDetailViewmodel.rows,
                                 title: inspectionDetailViewmodel.title,
@@ -35,7 +32,6 @@ struct MainView: View {
                             )
                             
                         } label: {
-                            
                             CellView(
                                 title: inspectionDetailViewmodel.title,
                                 imageName: inspectionDetailViewmodel.imageName
@@ -50,34 +46,7 @@ struct MainView: View {
                 .customNavigationBarBackButtonHidden(false)
             }
             .tint(.black)
-            .toolbar {
-                ToolbarItemGroup(placement: .navigationBarLeading) {
-    //
-                    
-                    HStack {
-                        
-    //                    Image(imageTitle)
-    //                        .resizable()
-    //                        .aspectRatio(contentMode: .fit)
-//                        Text(title)
-//                            .font(.custom("AlegreyaSC-Medium", size: 22))
-//                            .bold()
-//    //                        .frame(maxHeight: 70)
-//                            .foregroundColor(.black)
-//                            .lineLimit(nil)
-                        
-                    }
-                    .frame(height: 90)  // строка не съедается
-    //                .padding(.top, 30)
-                    
-                    
-                    
-
-                    
-                    
-                }
-                
-            }
+            
         }
     }
 }
