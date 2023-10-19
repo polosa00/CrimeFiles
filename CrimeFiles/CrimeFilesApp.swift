@@ -10,9 +10,13 @@ import SwiftUI
 @main
 
 struct CrimeFilesApp: App {
+    
+    @StateObject var searchManager = SearchManager()
+    
     var body: some Scene {
         WindowGroup {
-            MainView()
+            MainView(searchManager: searchManager)
+                .environmentObject(searchManager)
         }
     }
 }

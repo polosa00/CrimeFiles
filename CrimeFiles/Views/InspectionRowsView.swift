@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct InspectionRowsView: View {
+    @EnvironmentObject var searchManager: SearchManager
     
     @State var viewModel: [RowInspection] = [
         RowInspection(
@@ -25,33 +26,37 @@ struct InspectionRowsView: View {
             ZStack {
                 BackgroundView()
                     .ignoresSafeArea()
-                List(viewModel, id: \.title) { rowInspection in
-                    NavigationLink {
-                        
-                        if rowInspection.rowsDetails == nil {
-                            InformationView(
+                VStack {
+                    SearchBarView(searchManager: searchManager)
+                    
+                    List(viewModel, id: \.title) { rowInspection in
+                        NavigationLink {
+                            
+                            if rowInspection.rowsDetails == nil {
+                                InformationView(
+                                    title: rowInspection.title,
+                                    mainText: rowInspection.data
+                                )
+                            } else {
+                                InformationRowView(rowsDetails: rowInspection.rowsDetails ?? [RowDetailInspection(title: "Test", imageName:  "Test", data: "KKK" )],
+                                                   title: rowInspection.title
+                                )
+                                
+                            }
+                        } label: {
+                            CellView(
                                 title: rowInspection.title,
-                                mainText: rowInspection.data
-                            )
-                        } else {
-                            InformationRowView(rowsDetails: rowInspection.rowsDetails ?? [RowDetailInspection(title: "Test", imageName:  "Test", data: "KKK" )],
-                                               title: rowInspection.title
+                                imageName: rowInspection.imageName
                             )
                             
                         }
-                    } label: {
-                        CellView(
-                            title: rowInspection.title,
-                            imageName: rowInspection.imageName
-                        )
-                        
+                        .listRowBackground(Color.clear)
+                        .listRowSeparator(.hidden)
                     }
-                    .listRowBackground(Color.clear)
-                    .listRowSeparator(.hidden)
+                    .listStyle(.plain)
+                    .padding(.top, 20)
+                    .navigationTitle(title)
                 }
-                .listStyle(.plain)
-                .padding(.top, 20)
-                .navigationTitle(title)
             }
         }
     }
