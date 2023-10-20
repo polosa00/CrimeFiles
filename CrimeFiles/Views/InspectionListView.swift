@@ -9,9 +9,9 @@ import SwiftUI
 
 struct InspectionListView: View {
         
-    var inspectionList: [RowInspection]
-    var title: String
-    var imageTitle: String
+    let inspectionList: [RowInspection]
+    let title: String
+    let imageTitle: String
     
     var body: some View {
         NavigationStack {
@@ -67,6 +67,8 @@ struct InspectionListView: View {
             }
             
         }
+        
+        
     }
 }
 

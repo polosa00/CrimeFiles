@@ -9,9 +9,9 @@ import SwiftUI
 
 struct InformationRowView: View {
         
-    var rowsDetails: [RowDetailInspection]
-    var title: String
-    var imageTitle:String
+    let rowsDetails: [RowDetailInspection]
+    let title: String
+    let imageTitle:String
     
     var body: some View {
         

@@ -9,8 +9,8 @@ import SwiftUI
 
 struct InformationView: View {
     
-    var title: String
-    var mainText: String
+    let title: String
+    let mainText: String
     
     var body: some View {
         ZStack {
