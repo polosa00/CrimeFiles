@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct InspectionListView: View {
-    
-    //поменять на @ObservedObject
-    
+        
     var inspectionList: [RowInspection]
     var title: String
     var imageTitle: String
@@ -32,7 +30,7 @@ struct InspectionListView: View {
                         } else {
                             InformationRowView(rowsDetails: inspection.rowsDetails ??
                                 [RowDetailInspection(title: "Test", imageName:  "testImage", data: "Some data..." )],
-                            title: inspection.title
+                                               title: inspection.title, imageTitle: ""
                             )
                             
                         }
@@ -65,7 +63,7 @@ struct InspectionListView: View {
                         .foregroundColor(.black)
                         .lineLimit(nil)
                 }
-                .frame(height: 90)  // строка не съедается
+                .frame(height: 150)  // строка не съедается
             }
             
         }

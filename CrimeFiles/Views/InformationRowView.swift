@@ -8,13 +8,10 @@
 import SwiftUI
 
 struct InformationRowView: View {
-    
-    //поменять на @ObservedObject
-    
-    @State var rowsDetails: [RowDetailInspection]
-
-    @State var title = "Title"
-    @State var imageTitle = "ii"
+        
+    var rowsDetails: [RowDetailInspection]
+    var title: String
+    var imageTitle:String
     
     var body: some View {
         
@@ -62,7 +59,18 @@ struct InformationRowView: View {
 
 struct InformationRowView_Previews: PreviewProvider {
     static var previews: some View {
-        InformationRowView(rowsDetails: [RowDetailInspection(title: "Text title", imageName: "testImage", data: "Fill in in the future!")])
+        InformationRowView(
+            rowsDetails:
+                [
+                    RowDetailInspection(
+                        title: "Text title",
+                        imageName: "testImage",
+                        data: "Fill in in the future!"
+                    )
+                ],
+            title: "Title",
+            imageTitle: "titleImage"
+        )
     }
 }
 

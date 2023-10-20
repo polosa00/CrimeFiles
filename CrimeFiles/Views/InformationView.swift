@@ -9,8 +9,8 @@ import SwiftUI
 
 struct InformationView: View {
     
-    @State var title = "Title"
-    @State var mainText = "Text"
+    var title: String
+    var mainText: String
     
     var body: some View {
         ZStack {
@@ -20,7 +20,6 @@ struct InformationView: View {
                 ScrollView {
                     VStack(){
                         Text(mainText)
-//                            .bold()
                             .multilineTextAlignment(.leading)
                             .frame(maxWidth: .infinity)
                             .foregroundColor(.black)
@@ -47,7 +46,6 @@ struct InformationView: View {
 
                             Text(title)
                                 .font(.custom("AlegreyaSC-Medium", size: 22))
-//                                .lineSpacing(-10)
                                 .bold()
                                 .frame(maxHeight: 100)
                                 .foregroundColor(.black)
@@ -57,10 +55,7 @@ struct InformationView: View {
                     }
                     .frame(height: 105)
 
-
                 }
-                
-                
             }
         }
     }
@@ -68,6 +63,6 @@ struct InformationView: View {
 
 struct InformationView_Previews: PreviewProvider {
     static var previews: some View {
-        InformationView()
+        InformationView(title: "Title", mainText: "Main Text")
     }
 }
