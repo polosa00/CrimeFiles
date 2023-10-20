@@ -7,7 +7,7 @@
 
 import Foundation
 
-class InspectionViewModel: ObservableObject {
+final class InspectionViewModel: ObservableObject {
     
     @Published var inspections: [Inspection]
     

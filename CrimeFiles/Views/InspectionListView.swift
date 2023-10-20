@@ -31,7 +31,7 @@ struct InspectionListView: View {
                             )
                         } else {
                             InformationRowView(rowsDetails: inspection.rowsDetails ??
-                                [RowDetailInspection(title: "Test", imageName:  "Test", data: "KKK" )],
+                                [RowDetailInspection(title: "Test", imageName:  "testImage", data: "Some data..." )],
                             title: inspection.title
                             )
                             
@@ -87,9 +87,9 @@ struct InspectionListView_Previews: PreviewProvider {
                         title: "Камеры видеонаблюдения",
                         imageName: "testImage",
                         rowsDetails: [
-                            RowDetailInspection(title: "kkk", imageName: "kjj", data: "test!")
+                            RowDetailInspection(title: "Title", imageName: "testImage", data: "Some data...!")
                         ],
-                        data: "dssdfdsfs")
+                        data: "Some data...")
                 ],
             title: "There will be Title",
             imageTitle: "String name for image"
