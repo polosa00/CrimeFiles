@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainBackGroundView: View {
     var body: some View {
+        
         ZStack{
             BackgroundView()
                 .ignoresSafeArea()

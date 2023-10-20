@@ -9,7 +9,7 @@ import Foundation
 
 struct DataBase {
     
-    let preparednessToAction = DataStore.shared.preparednessToAction
+//    let preparednessToAction = DataStore.shared.preparednessToAction
     
     let inspections = [
         Inspection(

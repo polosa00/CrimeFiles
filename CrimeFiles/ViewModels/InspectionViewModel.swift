@@ -7,12 +7,12 @@
 
 import Foundation
 
-final class InspectionViewModel: ObservableObject {
+class InspectionViewModel: ObservableObject {
     
-   @Published var inspections = DataBase().inspections
+    @Published var inspections: [Inspection]
     
-    
-    
-    
-    
+    init() {
+        inspections = DataBase().inspections
+    }
+
 }

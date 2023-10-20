@@ -9,10 +9,6 @@ import SwiftUI
 
 struct MainView: View {
     
-//    let fontSizeForRow: CGFloat = 20
-//    let title: String
-//    let imageName: String
-    
     @StateObject private var viewModel = InspectionViewModel()
     
     var body: some View {
@@ -23,18 +19,18 @@ struct MainView: View {
                     MainBackGroundView()
                         .ignoresSafeArea()
 
-                    List(viewModel.inspections, id: \.title) { inspectionDetailViewmodel in
+                    List(viewModel.inspections, id: \.title) { inspectionDetailViewModel in
                         NavigationLink {
-                            InspectionRowsView(
-                                viewModel: inspectionDetailViewmodel.rows,
-                                title: inspectionDetailViewmodel.title,
-                                imageTitle: inspectionDetailViewmodel.titleImage
+                            InspectionListView(
+                                inspectionList: inspectionDetailViewModel.rows,
+                                title: inspectionDetailViewModel.title,
+                                imageTitle: inspectionDetailViewModel.titleImage
                             )
                             
                         } label: {
                             CellView(
-                                title: inspectionDetailViewmodel.title,
-                                imageName: inspectionDetailViewmodel.imageName
+                                title: inspectionDetailViewModel.title,
+                                imageName: inspectionDetailViewModel.imageName
                             )
                         }
                         .listRowBackground(Color.clear)
@@ -42,6 +38,7 @@ struct MainView: View {
                     }
                     .padding(.top, 100)
                     .listStyle(.plain)
+                    
                 }
                 .customNavigationBarBackButtonHidden(false)
             }

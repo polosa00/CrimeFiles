@@ -1,5 +1,5 @@
 //
-//  InspectionRowsView.swift
+//  InspectionListView.swift
 //  CrimeFiles
 //
 //  Created by Александр Полочанин on 1.10.23.
@@ -7,47 +7,39 @@
 
 import SwiftUI
 
-struct InspectionRowsView: View {
+struct InspectionListView: View {
     
     //поменять на @ObservedObject
     
-    @State var viewModel: [RowInspection] = [
-        RowInspection(
-            title: "Камеры видеонаблюдения",
-            imageName: "testImage",
-            rowsDetails: [
-                RowDetailInspection(title: "kkk", imageName: "kjj", data: "test!")
-            ],
-            data: "dssdfdsfs")
-    ]
-    @State var title = "Title"
-    @State var imageTitle = "ii"
+    var inspectionList: [RowInspection]
+    var title: String
+    var imageTitle: String
     
     var body: some View {
         NavigationStack {
             ZStack {
                 BackgroundView()
                     .ignoresSafeArea()
-                List(viewModel, id: \.title) { rowInspection in
+                List(inspectionList, id: \.title) { inspection in
                    
                     NavigationLink {
                         
-                        if rowInspection.rowsDetails == nil {
+                        if inspection.rowsDetails == nil {
                             InformationView(
-                                title: rowInspection.title,
-                                mainText: rowInspection.data
+                                title: inspection.title,
+                                mainText: inspection.data
                             )
                         } else {
-                            InformationRowView(rowsDetails: rowInspection.rowsDetails ??
+                            InformationRowView(rowsDetails: inspection.rowsDetails ??
                                 [RowDetailInspection(title: "Test", imageName:  "Test", data: "KKK" )],
-                            title: rowInspection.title
+                            title: inspection.title
                             )
                             
                         }
                     } label: {
                         CellView(
-                            title: rowInspection.title,
-                            imageName: rowInspection.imageName
+                            title: inspection.title,
+                            imageName: inspection.imageName
                         )
                         
                     }
@@ -63,27 +55,17 @@ struct InspectionRowsView: View {
             ToolbarItemGroup(placement: .navigationBarLeading) {
                 HStack {
                     
-//                    Image(imageTitle)
-//                        .resizable()
-//                        .aspectRatio(contentMode: .fit)
+                    Image(imageTitle)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
                     Text(title)
                         .font(.custom("AlegreyaSC-Medium", size: 22))
                         .bold()
                         .lineSpacing(0)
-//                        .lineLimit(<#T##number: Int?##Int?#>)
-//                        .frame(maxHeight: 70)
                         .foregroundColor(.black)
                         .lineLimit(nil)
-                    
                 }
                 .frame(height: 90)  // строка не съедается
-//                .padding(.top, 30)
-                
-                
-                
-
-                
-                
             }
             
         }
@@ -96,8 +78,21 @@ struct TestView: View {
     }
 }
 
-struct InspectionRowView_Previews: PreviewProvider {
+struct InspectionListView_Previews: PreviewProvider {
     static var previews: some View {
-        InspectionRowsView(title: "Камеры видеонаблюдения")
+        InspectionListView(
+            inspectionList:
+                [
+                    RowInspection(
+                        title: "Камеры видеонаблюдения",
+                        imageName: "testImage",
+                        rowsDetails: [
+                            RowDetailInspection(title: "kkk", imageName: "kjj", data: "test!")
+                        ],
+                        data: "dssdfdsfs")
+                ],
+            title: "There will be Title",
+            imageTitle: "String name for image"
+        )
     }
 }

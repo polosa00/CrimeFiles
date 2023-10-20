@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct InformationView: View {
+    
     @State var title = "Title"
     @State var mainText = "Text"
     
