@@ -63,7 +63,7 @@ struct InspectionListView: View {
                         .foregroundColor(.black)
                         .lineLimit(nil)
                 }
-                .frame(height: 150)  // строка не съедается
+                .frame(height: 90)  // строка не съедается
             }
             
         }

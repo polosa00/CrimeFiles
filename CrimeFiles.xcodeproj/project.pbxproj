@@ -13,7 +13,7 @@
 		11BB91BD2ABE248D00822599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11BB91BC2ABE248D00822599 /* Assets.xcassets */; };
 		11BB91C02ABE248D00822599 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11BB91BF2ABE248D00822599 /* Preview Assets.xcassets */; };
 		11BB91C52ABE248D00822599 /* CrimeFiles.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11BB91C32ABE248D00822599 /* CrimeFiles.xcdatamodeld */; };
-		11ED122F2AC9C63100831C7F /* InspectionRowsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ED122E2AC9C63100831C7F /* InspectionRowsView.swift */; };
+		11ED122F2AC9C63100831C7F /* InspectionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ED122E2AC9C63100831C7F /* InspectionListView.swift */; };
 		7879AA862AC5C415008ABC5F /* Inspection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7879AA852AC5C415008ABC5F /* Inspection.swift */; };
 		7879AA892AC5C502008ABC5F /* InspectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7879AA882AC5C502008ABC5F /* InspectionViewModel.swift */; };
 		7879AA8C2AC5C51F008ABC5F /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7879AA8B2AC5C51F008ABC5F /* DataBase.swift */; };
@@ -40,7 +40,7 @@
 		11BB91BC2ABE248D00822599 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11BB91BF2ABE248D00822599 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		11BB91C42ABE248D00822599 /* CrimeFiles.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CrimeFiles.xcdatamodel; sourceTree = "<group>"; };
-		11ED122E2AC9C63100831C7F /* InspectionRowsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionRowsView.swift; sourceTree = "<group>"; };
+		11ED122E2AC9C63100831C7F /* InspectionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionListView.swift; sourceTree = "<group>"; };
 		7879AA852AC5C415008ABC5F /* Inspection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inspection.swift; sourceTree = "<group>"; };
 		7879AA882AC5C502008ABC5F /* InspectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionViewModel.swift; sourceTree = "<group>"; };
 		7879AA8B2AC5C51F008ABC5F /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
@@ -71,6 +71,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1111DA452AE280EE00005B16 /* BackGround */ = {
+			isa = PBXGroup;
+			children = (
+				9367BCD82AC3095E00576D08 /* BackgroundView.swift */,
+				9367BCE42AC6F79400576D08 /* MainBackGroundView.swift */,
+			);
+			path = BackGround;
+			sourceTree = "<group>";
+		};
 		11BB91AC2ABE248C00822599 = {
 			isa = PBXGroup;
 			children = (
@@ -148,12 +157,11 @@
 			isa = PBXGroup;
 			children = (
 				9367BCD62AC3090700576D08 /* CellView.swift */,
-				9367BCD82AC3095E00576D08 /* BackgroundView.swift */,
 				9367BCDA2AC3099A00576D08 /* MainView.swift */,
-				9367BCE42AC6F79400576D08 /* MainBackGroundView.swift */,
-				11ED122E2AC9C63100831C7F /* InspectionRowsView.swift */,
+				11ED122E2AC9C63100831C7F /* InspectionListView.swift */,
 				115DCD0E2ACB04AE009DBDE3 /* InformationRowView.swift */,
 				115DCD0C2ACAFD82009DBDE3 /* InformationView.swift */,
+				1111DA452AE280EE00005B16 /* BackGround */,
 				9326F8322ACD6A4E001E99E2 /* Custom Navigation Bar */,
 			);
 			path = Views;
@@ -269,7 +277,7 @@
 				11BB91C52ABE248D00822599 /* CrimeFiles.xcdatamodeld in Sources */,
 				11BB91B92ABE248C00822599 /* CrimeFilesApp.swift in Sources */,
 				9326F82D2ACD66D6001E99E2 /* CustomNavigationBarContainerView.swift in Sources */,
-				11ED122F2AC9C63100831C7F /* InspectionRowsView.swift in Sources */,
+				11ED122F2AC9C63100831C7F /* InspectionListView.swift in Sources */,
 				9367BCE52AC6F79400576D08 /* MainBackGroundView.swift in Sources */,
 				9367BCDB2AC3099A00576D08 /* MainView.swift in Sources */,
 				7879AA862AC5C415008ABC5F /* Inspection.swift in Sources */,
